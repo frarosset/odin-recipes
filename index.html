@@ -4,14 +4,39 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Odin Recipes</title>
+	<style>
+		.recipe{
+			display:  block;
+			width: 180px;
+			height:120px;
+			background-size: cover;
+			text-align:  center;
+			font-weight: bolder;
+			font-variant: small-caps;
+			color:  white;
+			text-shadow: 1px 1px 4px black;
+			padding-top: 5px;
+			margin-top:  20px;
+		}
+		a {
+			text-decoration: none;
+		}
+	</style>
 </head>
 <body>
 	<h1>Odin Recipes</h1>
 	<ul>
-		<li><a href="./recipes/carbonara.html">Pasta Carbonara</a></li>
-		<li><a href="./recipes/pizza.html">Pizza</a></li>
-		<li><a href="./recipes/tiramisu.html">Tiramisù</a></li>
+		<li><a href="./recipes/carbonara.html">
+			<div style="background-image:url('./img/carbonara.jpg');" class=recipe>Pasta Carbonara</div>
+		</a></li>
+
+		<li><a href="./recipes/pizza.html">
+			<div style="background-image:url('./img/pizza.jpg');" class=recipe>Pizza</div>
+		</a></li>
+
+		<li><a href="./recipes/tiramisu.html">
+			<div style="background-image:url('./img/tiramisu.jpg');" class=recipe>Tiramisù</div>
+		</a></li>
 	</ul>
-	
 </body>
 </html>
