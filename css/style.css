@@ -16,6 +16,7 @@ body{
 	background-color: var(--col-wht);
 	font-family: 'Trebuchet MS', 'Tahoma', sans-serif;
 	color: var(--col-blk);
+	font-size: 18px;
 }
 
 h1{
@@ -26,8 +27,6 @@ h1{
 
 
 h1.recipe-hdr{
-	text-align:  center;
-	color: var(--col30);
 	font-size: 40px;
 }
 
@@ -54,4 +53,35 @@ h1.recipe-hdr{
 
 .recipes-list a {
 	text-decoration: none;
+}
+
+.recipe-hdr2{
+	color: var(--col30);
+	font-size: 25px;
+	font-variant: small-caps;
+}
+
+.note{
+	color: var(--col60);
+	font-size: 13px;
+}
+
+.back{
+	color: var(--col60);
+	font-size: 16px;
+	font-weight: bolder;
+	font-variant: small-caps;
+}
+
+.steps strong{
+	font-weight: bolder;
+	font-variant: small-caps;
+	color: var(--col60);	
+}
+
+.enjoy{
+	display: inline;
+	font-weight: bolder;
+	font-variant: small-caps;
+	color: var(--col10);	
 }
