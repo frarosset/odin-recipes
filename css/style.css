@@ -1,87 +1,241 @@
 :root {
 	/* A color theme */
-	--col10: #F7882F; /* apricot */ 
-	--col60: #6B7A8F; /* blueberry */
-	--col30: #F7C331; /* citrus */
-	--col60b: #DCC7AA; /* apple core */
-	--col-wht: #EFEFEF; /*neutral*/
-	--col-blk: #222222; /*neutral*/
+	--col10: #F7882F;   /* apricot */ 
+	--col60: #6B7A8F;   /* blueberry */
+	--col30: #F7C331;   /* citrus */
+	--col60b: #DCC7AA;  /* apple core */
+	--colWHT: #EFEFEF; /*neutral white*/
+	--colBLK: #222222; /*neutral black*/
+	--colWHTA: rgba(239,239,239,0.5); /* #EFEFEF with alpha*/
 }
 
 *{
 	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
 
 body{
-	background-color: var(--col-wht);
+  	width: 500px;
+  	margin: 0 auto;
+	color: var(--colBLK);
 	font-family: 'Trebuchet MS', 'Tahoma', sans-serif;
-	color: var(--col-blk);
 	font-size: 18px;
+	background-color: var(--colWHT);
+	/*background-image: url(../img/pngwing.com.png);
+	background-repeat: repeat;*/ /*TODO: choose a background*/
+	/*background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment:fixed;*/ /* Fixed when scrolling */
 }
 
-h1{
+/* Headers */
+
+body header{
+	padding: 30px 0px 20px;
+}
+section header{
+	padding: 10px 10px 20px;
+}
+
+h1,
+h2{
 	text-align:  center;
-	color: var(--col10);
-	font-size: 50px;
+	font-variant: small-caps;
 }
 
+h1.index-hdr1{
+	font-size: 50px;
+	color: var(--col10);
+}
 
 h1.recipe-hdr1{
 	font-size: 40px;
+	color: var(--col10);
 }
 
+h2.recipe-hdr2{ 
+	font-size: 25px;
+	color: var(--col30);
+	border-bottom: 5px solid var(--col30);
+	background-color:  var(--colWHT);
+	margin:  0px auto;
+	width:  40%;
+}
 
-.recipe-list{
-	text-align:  center;
-	max-width: 400px;
+/* Navs and Footers */
+
+nav,
+footer{
+	text-align: center;
+	padding: 10px;
+}
+
+nav{
+	margin:  0px auto 0;
+}
+
+footer{
+	margin:  50px auto 0;
+}
+
+nav a,
+footer a{
+	display: inline-block;	
+	color: var(--col60);
+	font-size: 16px;
+	font-weight: bolder;
+	font-variant: small-caps;
+	background-color: var(--colWHT);
+	border-radius: 10px;
+	padding: 6px 8px;
+}
+
+/* --- Recipes list (index.html) ------ */
+
+.recipes-list{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: center;
+    justify-content: center;
+	list-style-type:none;
+	width: 100%;
+}
+
+.recipe-item{
+	width: 180px;
+	height:120px;
+	padding: 0px;
+	margin: 10px;
+}
+
+.recipe-item a {
+	display: block; 
+	text-decoration: none;
+	margin: 0px; 
+	width: 100%; 
+	height: 100%; 
 }
 
 .recipe-icon{
-	display: block;
-	width: 180px;
-	height:120px;
+	width: 100%;
+	height:100%;
 	background-size: cover;
 	text-align:  center;
 	font-weight: bolder;
 	font-variant: small-caps;
 	font-size: 22px;
-	color:  var(--col-wht);
-	text-shadow: 1px 2px 6px var(--col-blk);
+	color:  var(--colWHT);
+	text-shadow: 1px 2px 6px var(--colBLK);
 	padding-top: 5px;
-	margin-top:  10px;
 }
 
-.recipes-list a {
-	text-decoration: none;
+
+/* --- Specific Recipe (recipes/*.html) --- */
+
+main{
+	padding: 0px;
+	margin: 50px 0 0;
 }
 
-.recipe-hdr2{
-	color: var(--col30);
-	font-size: 25px;
-	font-variant: small-caps;
+
+main figure{
+	display: block;
+	width:  100%;
+	margin: 0px;
+	padding: 0;
+}
+
+.recipe-img img{
+	object-fit: cover;
+	display: block;
+	width:  100%;
+}
+
+/* The next three rules make .recipe-img-top and 
+   .recipe-img-blur coincident */
+/* A blur is added to .recipe-img-blur */
+.recipe-img{
+	position: relative;
+	top: 0;
+	left: 0;
+}
+.recipe-img-blur {
+  position: relative;
+  top: 0;
+  left: 0;
+  -webkit-filter: blur(20px);
+  -moz-filter: blur(20px);
+  -o-filter: blur(20px);
+  -ms-filter: blur(20px);
+  filter: blur(20px);
+}
+.recipe-img-top {
+  position: absolute;
+  top: 0px;
+  left: 0px;
 }
 
 .note{
 	color: var(--col60);
 	font-size: 13px;
+	text-align: right;
+	margin-top: 5px;            
 }
 
-nav a,
-footer a{
-	color: var(--col60);
-	font-size: 16px;
-	font-weight: bolder;
-	font-variant: small-caps;
+
+#description,
+#ingredients,
+#steps{
+	background-color: var(--colWHT);
+	padding: 10px 45px 20px;
+	margin:  50px auto 0px;
+	box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
 }
 
-.steps-list strong{
+main{
+	padding: 0px;
+}
+
+main #description{
+	text-align: center;
+	padding-left: 50px;
+	padding-right: 50px;
+}
+
+main #steps{
+	text-align: justify;
+}
+
+main #steps .steps-list strong{
 	font-weight: bolder;
 	font-variant: small-caps;
 	color: var(--col60);	
 }
 
-.enjoy{
+main #steps .enjoy{
+                 
 	font-weight: bolder;
 	font-variant: small-caps;
 	color: var(--col10);	
+}
+
+main ul,
+main ol{
+	/*list-style-position: inside;*/
+	padding-left: 25px;
+}
+
+main ul{
+  	columns: 2;
+  	-webkit-columns: 2;
+  	-moz-columns: 2;
+  	list-style-position: inside;
+}
+
+main li{
+	margin-bottom:  14px;
+
 }
