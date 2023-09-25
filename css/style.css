@@ -26,7 +26,7 @@ h1{
 }
 
 
-h1.recipe-hdr{
+h1.recipe-hdr1{
 	font-size: 40px;
 }
 
@@ -66,21 +66,21 @@ h1.recipe-hdr{
 	font-size: 13px;
 }
 
-.back{
+nav a,
+footer a{
 	color: var(--col60);
 	font-size: 16px;
 	font-weight: bolder;
 	font-variant: small-caps;
 }
 
-.steps strong{
+.steps-list strong{
 	font-weight: bolder;
 	font-variant: small-caps;
 	color: var(--col60);	
 }
 
 .enjoy{
-	display: inline;
 	font-weight: bolder;
 	font-variant: small-caps;
 	color: var(--col10);	
